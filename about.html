@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name"desciprion" content="Thabang Mmako Assignment Intro">
+    <meta name"author" content="Thabang Mmako">
+    <meta name"keywords" content="HTML, mLab, help, about">
+    <title>About me</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <table class="headerTable">
+            <tr>
+                <td>
+                    <a href="index.html">
+                        <img id="logo" src="images/programming.jpg" alt="Logo">
+                    </a>
+                </td>
+                <td align="right">
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About me</a>
+                        <a href="contact.html">Contact me</a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <main>
+        <table id="mainTable">
+            <tr>
+                <td width="50%" align="center">
+                    <div id="bioBox">
+                        <h1 class="userName">About me</h1>
+<span class="userText">Thabang Mmako, a dedicated software developer with a passion for innovation and problem-solving. Hailing from the vibrant city of Johannesburg, Gauteng, South Africa, I bring over seven years of invaluable experience in Process Control, Instrumentation, and Electrical fields, primarily within Glass Manufacturing. </span>
+<span class="additionalInfo" style="display: none;"> <!-- Initially hidden -->
+    <!-- Additional information goes here -->
+    My journey has been marked by diverse roles, each contributing to my expertise in areas such as Process Control Systems, PLC programming, Root Cause Analysis, and Electrical Systems.
+</span>
+<input class="btn" type="button" value="Read more..." onclick="toggleAdditionalInfo()">
+
+                        
+                    </div>
+                </td>
+                <td align="right">
+                    <img id="userImage" src="images/profile_picture.jpeg" alt="User Image">
+                </td>
+            </tr>
+        </table>
+
+    </main>
+
+    <footer>
+        <table class="headerTable footerTable">
+            <tr align="center">
+                <td>
+                    Copyright &copy; <span id="copyright-year">2024</span>
+                    Thabang Mmako. All rights reserved
+                    <script>
+                        document.querySelector('#copyright-year').innerText = new Date().getFullYear();
+                    </script>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+
+</html>

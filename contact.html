@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thabang Mmako Assignment Intro">
+    <meta name="author" content="Thabang Mmako">
+    <meta name="keywords" content="HTML, mLab, help, contact">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Contact me</title>
+    <style>
+        
+
+        .contact__form .form-control {
+            padding: 1.375rem .75rem;
+            line-height: 1.5;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            border-radius: 0 !important;
+            border: 1px solid var(--secondary-color);
+        }
+
+        .contact__form input.form-control {
+            margin-bottom: 2em;
+            height: calc(2.5em + .75rem + 2px);
+        }
+
+        button.btn.ac_btn:hover {
+            color: var(--secondary-color);
+        }
+
+        .loading-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            z-index: 999999999;
+            background: var(--text-color);
+            transform: translateX(100%);
+            animation: shift-rightwards 1s ease-in-out infinite;
+            animation-delay: .3s;
+        }
+
+        @keyframes shift-rightwards {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            40% {
+                transform: translateX(0%);
+            }
+
+            60% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.contact__form {
+    width: 100%;
+    max-width: 500px; /* Adjust the max-width as needed */
+}
+
+.contact__form .row {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+}
+
+.contact__form .form-group {
+    margin-bottom: 1rem;
+    flex: 1; 
+}
+
+.contact__form .btn {
+    width: 100%;
+}
+
+.contact__form input.form-control {
+    margin-bottom: 1em; /* Adjust margin if needed */
+    height: calc(.5em + .5rem); /* Adjust height as needed */
+    font-size: 0.8em; /* Adjust font size as needed */
+    border: 1px solid black;
+}
+
+.contact__form input[type="text"],
+.contact__form input[type="email"] {
+    width: 100%; /* Make inputs fill their container */
+}
+
+.contact__form .col-lg-6:first-child {
+    margin-right: 1.5em; /* Adjust margin to move name element to the left */
+}
+
+.contact__form .col-lg-6:last-child {
+    margin-left: 1.5em; /* Adjust margin to move email element to the right */
+}
+
+.contact__form .col-lg-7 {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__form textarea.form-control {
+    min-height: 200px;
+    min-width: 200px; /* Adjust min-height for the message textarea */
+    font-size: 1em; /* Adjust font size as needed */
+    border: 1px solid black;
+    width: 100%;
+}
+
+.contact__form .col-lg-7 form-group.text-center {
+    margin-top: 1em; /* Adjust margin to push the button away from the textarea */
+}
+
+.contact__form .col-lg-12.form-group.text-center button.btn.ac_btn {
+    margin-left: 1em; /* Adjust margin to shift the button slightly to the right */
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <table class="headerTable">
+            <tr>
+                <td>
+                    <a href="index.html">
+                        <img id="logo" src="images/programming.jpg" alt="Logo">
+                    </a>
+                </td>
+                <td align="right">
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About me</a>
+                        <a href="contact.html">Contact me</a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <main>
+        <h1>Contact Me</h1>
+        <div class="container">
+            
+            <div class="row sec_sp">
+                <div class="col-lg-12">
+                    <div class="alert rounded-0 co_alert d-none">
+                        <p class="my-0"></p>
+                    </div>
+                </div>
+                <div class="col-lg-5 mb-5">
+                    <h3 class="color_sec py-4">Get in touch</h3>
+                    <address>
+                        <strong>Email:</strong>
+                        <a href="mailto:email@example.com">thabang.mmako@gmail.com</a>
+                        <br>
+                        <br>
+                    </address>
+                    <!-- <span class="contactMessage">
+                        Welcome to my contact page! I'm thrilled that you're considering reaching out to me. Whether you have questions about my work, want to collaborate on a project, or simply want to say hello, I'm here to listen. Your feedback and inquiries are invaluable to me, and I'm committed to providing prompt and thoughtful responses. Feel free to fill out the form below with your name, email address, and message, and I'll get back to you as soon as possible. Thank you for visiting, and I look forward to connecting with you!
+                    </span> -->
+                </div>
+                <div class="col-lg-7 d-flex align-items-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <form class="contact__form" onsubmit="handleSubmit(event)">
+                                    <div class="row">
+                                        <div class="col-lg-6 form-group">
+                                            <input class="form-control" placeholder="Name" type="text" name="name" id="name" required>
+                                        </div>
+                                        <div class="col-lg-6 form-group">
+                                            <input class="form-control rounded-0" placeholder="Email" type="email" name="email" id="email" required>
+                                        </div>
+                                    </div>
+                                    <textarea class="form-control rounded-0" placeholder="Message" name="message" id="message" rows="5" required></textarea>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 form-group text-center">
+                                            <button class="btn ac_btn" type="submit">Send</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <table class="headerTable footerTable">
+            <tr align="center">
+                <td>
+                    Copyright &copy; <span id="copyright-year">2024</span>
+                    Thabang Mmako All rights reserved
+                    <script>
+                        document.querySelector('#copyright-year').innerText = new Date().getFullYear();
+                    </script>
+                </td>
+            </tr>
+        </table>
+    </footer>
+    <div class="loading-bar d-none"></div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            var formData = {
+                email: document.getElementById('email').value,
+                name: document.getElementById('name').value,
+                message: document.getElementById('message').value,
+                loading: false,
+                show: false,
+                alertmessage: "",
+                variant: ""
+            };
+
+            // email sending logic here
+        }
+    </script>
+</body>
+
+</html>
